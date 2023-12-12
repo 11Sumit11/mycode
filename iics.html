@@ -1,0 +1,605 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IICS</title>
+
+    <style>
+      body {
+        font-family: roboto, sans-serif;
+        font-size: 14px;
+        color: #666;
+      }
+      header {
+        display: inline-flex;
+
+        padding: 10px 170px;
+        margin: -7px -8px;
+        background-color: #252525;
+        width: 100%;
+        height: 4%;
+        font-weight: bold;
+        color: #ccc;
+      }
+      .header {
+        padding: 0 28px;
+        color: #ccc;
+      }
+      .first {
+        display: inline-flex;
+        width: 100%;
+        margin: 20px 85px;
+        height: 130px;
+      }
+      b {
+        color: black;
+      }
+      .logo {
+        width: 60%;
+        margin: 0 100px;
+      }
+      .logo img {
+        height: 130px;
+      }
+      .logo1 {
+        display: inline-flex;
+        width: 40%;
+      }
+      .text {
+        width: 50%;
+        text-transform: capitalize;
+      }
+      nav {
+        position: sticky;
+        top: 40px;
+        height: 9%;
+        width: 100%;
+        background-color: #f6f6f6;
+        font-size: 14px;
+        color: #252525;
+        font-weight: bold;
+        margin: 0 -5px;
+      }
+
+      .menu {
+        display: inline-flex;
+        list-style: none;
+        margin: 0 80px;
+      }
+      .menu li {
+        padding: 21px 30px;
+        background-color: #f6f6f6;
+        text-transform: uppercase;
+      }
+      .menu li:hover {
+        padding: 21px 30px;
+        background-color: #00b16a;
+        color: rgb(255, 255, 255);
+      }
+      .list {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+        color: 8d8d8d;
+        text-transform: lowercase;
+        font-weight: lighter;
+        position: absolute;
+        top: 59px;
+        left: 355px;
+      }
+
+      .dropdown:hover .list {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .list1 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+        color: #8d8d8d;
+        text-transform: lowercase;
+        font-weight: lighter;
+        position: absolute;
+        top: 59px;
+        left: 484px;
+      }
+      .dropdown1:hover .list1 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .list2 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+        color: 8d8d8d;
+        text-transform: lowercase;
+        font-weight: lighter;
+        top: 59px;
+        left: 686px;
+        position: absolute;
+      }
+      .dropdown2:hover .list2 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .exlist {
+        left: 203px;
+        top: 0;
+        width: 265px;
+        font-weight: lighter;
+        color: 8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .soft:hover .exlist {
+        display: inline;
+      }
+      .exlist1 {
+        left: 203px;
+        top: 59px;
+        width: 265px;
+        font-weight: lighter;
+        color: 8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .hard:hover .exlist1 {
+        display: inline;
+      }
+      .exlist2 {
+        left: 203px;
+        top: 117px;
+        width: 265px;
+        font-weight: lighter;
+        color: 8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .E-accounting:hover .exlist2 {
+        display: inline;
+      }
+      .exlist3 {
+        left: 203px;
+        top: 177px;
+        width: 265px;
+        font-weight: lighter;
+        color: #8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .multimedia:hover .exlist3 {
+        display: inline;
+      }
+      .exlist4 {
+        left: 203px;
+        top: 235px;
+        width: 265px;
+        font-weight: lighter;
+        color: #8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .exlistnew {
+        left: 185px;
+        top: 0;
+        width: 265px;
+        font-weight: lighter;
+        color: #8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .cyber:hover .exlistnew {
+        display: inline;
+      }
+      .exlistnew1 {
+        left: 185px;
+        top: 59px;
+        width: 265px;
+        font-weight: lighter;
+        color: #8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .digital:hover .exlistnew1 {
+        display: inline;
+      }
+      .exlistnew2 {
+        left: 185px;
+        top: 118px;
+        width: 265px;
+        font-weight: lighter;
+        color: #8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .corporate:hover .exlistnew2 {
+        display: inline;
+      }
+      .exlistnew3 {
+        left: 185px;
+        top: 176px;
+        width: 265px;
+        font-weight: lighter;
+        color: #8d8d8d;
+        position: absolute;
+        list-style: none;
+        display: none;
+      }
+      .short:hover .exlistnew3 {
+        display: inline;
+      }
+
+      .animation {
+        background-image: url("iics1.jpg");
+        width: 100%;
+        height: 100%;
+        margin: 0 -5px;
+        color: white;
+        text-transform: capitalize;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .animation h1 {
+        color: white;
+        font-weight: bold;
+        font-size: 45px;
+        text-transform: capitalize;
+      }
+      .button1 {
+        margin: 5px 8px 0 0;
+        background-color: #00b16a;
+        color: white;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .button1:hover {
+        margin: 5px 8px 0 0;
+        background-color: white;
+        color: black;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .button2 {
+        margin: 5px 8px 0 0;
+        background-color: white;
+        color: black;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .button2:hover {
+        margin: 5px 8px 0 0;
+        background-color: #00b16a;
+        color: rgb(254, 254, 254);
+        padding: 12px 18px;
+        border: none;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+      .second {
+        position: relative;
+        left: 10%;
+        top: 20%;
+        display: none;
+      }
+      .animation:hover .second {
+        display: inline-block;
+      }
+
+      .third {
+        text-align: center;
+      }
+      .third h1 {
+        color: black;
+        text-transform: capitalize;
+        font-size: 38px;
+      }
+      .img {
+        display: inline-flex;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+      .img div {
+        padding: 0;
+        margin: 50px -107px;
+      }
+      .img div h2 {
+        width: 370px;
+      }
+      .img div p {
+        width: 370px;
+      }
+
+      .comments {
+        text-align: center;
+        width: 100%;
+        background-color: #858181;
+        height: 400px;
+      }
+      .comments1 {
+        margin: 123px 15px;
+        display: inline-flex;
+        background-color: white;
+        width: 550px;
+        height: 200px;
+      }
+      .photo {
+        margin: -40px 0;
+        left: 435px;
+        position: absolute;
+        border-radius: 150px;
+      }
+      .photo img {
+        border: 5px solid white;
+        width: 62px;
+        padding: 0 0px;
+        position: absolute;
+        border-radius: 150px;
+      }
+      .photo img:hover {
+        border: 5px solid #00b16a;
+        width: 62px;
+        padding: 0 0px;
+        position: absolute;
+        border-radius: 150px;
+      }
+      .comments2 {
+        margin: 123px 15px;
+        display: inline-flex;
+        background-color: white;
+        width: 550px;
+        height: 200px;
+      }
+      .photo1 {
+        margin: -40px 0;
+        left: 1025px;
+        position: absolute;
+        border-radius: 150px;
+      }
+      .photo1 img {
+        border: 5px solid white;
+        width: 62px;
+        padding: 0 0px;
+        position: absolute;
+        border-radius: 150px;
+      }
+      .photo1 img:hover {
+        border: 5px solid #00b16a;
+        width: 62px;
+        padding: 0 0px;
+        position: absolute;
+        border-radius: 150px;
+      }
+      h2 {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header">91-9540299944</div>
+      <div class="header">iicsomputereducation@gmail.com</div>
+      <div class="header">opening: 7:30am - 6:30pm</div>
+    </header>
+    <section>
+      <div class="first">
+        <div class="logo"><img src="logo.jpg" alt="" /></div>
+        <div class="logo1">
+          <div class="text">
+            <b>Call Now</b><br />
+            (91+) 9540 299 944
+          </div>
+          <div class="text">
+            <b>Total Branches</b> <br />
+            8 branches
+          </div>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="menu">
+          <li style="color: white; background-color: #00b16a">home</li>
+
+          <li>about us</li>
+          <li class="dropdown">
+            courses
+            <ol class="list">
+              <li class="soft">
+                software engineering
+                <ol class="exlist">
+                  <li>NIELIT CCC</li>
+                  <li>DCAP+</li>
+                  <li>ADCE+</li>
+                  <li>MDCE+</li>
+                  <li>PDSHE</li>
+                  <li>PDSEA</li>
+                  <li>NIELIT TRAINING</li>
+                </ol>
+              </li>
+              <li class="hard">
+                hardware engineering
+                <ol class="exlist1">
+                  <li>DCHN</li>
+                  <li>ADCHN</li>
+                  <li>CCNA</li>
+                </ol>
+              </li>
+              <li class="e-accounting">
+                e-accounting
+                <ol class="exlist2">
+                  <li>PDEA</li>
+                  <li>ADEA</li>
+                </ol>
+              </li>
+              <li class="multimedia">
+                multimedia & animation
+                <ol class="exlist3">
+                  <li>GRAPHIC DESIGNING</li>
+                  <li>DMA</li>
+                  <li>ADMA</li>
+                  <li>MDMA</li>
+                  <li>Maya Traning</li>
+                  <li>Max training</li>
+                </ol>
+              </li>
+              <li class="website">
+                website engineering
+                <ol class="exlist4">
+                  <li>DWE (1 year)</li>
+                  <li>ADWE</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="dropdown1">
+            advance courses
+            <ol class="list1">
+              <li class="cyber">
+                cyber security & eh
+                <ol class="exlistnew">
+                  <li>cyber security & ethical hacking (6 months)</li>
+                  <li>cyber security & ethical hacking (12 months)</li>
+                </ol>
+              </li>
+              <li class="digital">
+                digital marketing
+                <ol class="exlistnew1">
+                  <li>SEO Training</li>
+                  <li>Digital Marketing(4 months)</li>
+                  <li>Digital Marketing(6 months)</li>
+                </ol>
+              </li>
+              <li class="corporate">
+                corporate courses
+                <ol class="exlistnew2">
+                  <li>Data Science With Python</li>
+                  <li>Data Science With R Programing</li>
+                  <li>Big Data Analytics Using Hadoop</li>
+                  <li>Data Science Using Tableau</li>
+                  <li>Power BI</li>
+                  <li>Cloud computing</li>
+                  <li>BPO</li>
+                  <li>Mobile Application Development</li>
+                </ol>
+              </li>
+              <li class="short">
+                short term courses
+                <ol class="exlistnew3">
+                  <li>NIELIT Training</li>
+                  <li>JAVA Training</li>
+                  <li>PHP Training</li>
+                  <li>Python Training</li>
+                  <li>Wordpress Training</li>
+                  <li>Dot Net Training</li>
+                  <li>SL Server Certification</li>
+                  <li>Joomla Training</li>
+                  <li>Magento training</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="dropdown2">
+            academics
+            <ol class="list2">
+              <li>placement</li>
+            </ol>
+          </li>
+          <li>gallery</li>
+          <li>franchise</li>
+          <li>blogs</li>
+          <li>contact us</li>
+        </ul>
+      </nav>
+      <div class="animation">
+        <div class="second">
+          <h1>multimedia & animation</h1>
+
+          best computer institute in delhi
+          <br /><br /><br />
+          <button class="button1">about multimedia</button>
+          <button class="button2">contact us</button>
+        </div>
+      </div>
+      <div class="third">
+        <h1>achievement</h1>
+        <p>
+          "You Educate a man, You Educate a man. You Educate a woman, You
+          Educate a generation."
+        </p>
+      </div>
+      <div class="img">
+        <div>
+          <img src="iics-india-award.jpg" alt="" />
+          <h2>Awarded As Best Skill Development Institute in North India</h2>
+          <p>
+            Receiving award for Best Skill Development Institute in North India
+            from honourable HRD minister of state Dr. Ram Shankar Katheria.
+          </p>
+        </div>
+        <div>
+          <img src="iics-india-award1.jpg" alt="" />
+          <h2>Awarded As Best Placement Institute in North India</h2>
+          <p>
+            Receiving award for Best Placement Institute in North India from
+            honourable HRD minister of state Dr. Ram Shankar Katheria.
+          </p>
+        </div>
+        <div>
+          <img src="iics-ind.jpeg" alt="" />
+          <h2>Awarded As Best Computer Education in Delhi-NCR</h2>
+          <p>
+            Receiving Award For “BEST COMPUTER EDUCATION IN DELHI-NCR” From
+            Honorable Union Minister of Communications and Information
+            Technology & Minister of […]
+          </p>
+        </div>
+      </div>
+
+      <div class="comments">
+        <div class="comments1">
+          <div class="photo">
+            <img src="photo.jpg" alt="" />
+          </div>
+        </div>
+        <div class="comments2">
+          <div class="photo1"><img src="photo1.jpg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

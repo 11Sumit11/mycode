@@ -1,0 +1,148 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .h1 {
+        height: 9%;
+        width: 100%;
+        background-color: #f6f6f6;
+        font-size: 14px;
+        color: #252525;
+        font-weight: bold;
+        margin: 0 -5px;
+        position: fixed;
+        top: 5.5px;
+        transition: all 2s ease-in;
+      }
+      .h1:hover {
+        height: 9%;
+        width: 100%;
+        background-color: #f6f6f6;
+        font-size: 14px;
+        color: #c41616;
+        font-weight: bold;
+        margin: 0 -5px;
+        position: fixed;
+        top: 5.5px;
+      }
+
+      .menu {
+        display: inline-flex;
+        list-style: none;
+        margin: 0 80px;
+      }
+      .menu li {
+        padding: 21px 30px;
+        background-color: #f6f6f6;
+        text-transform: uppercase;
+      }
+      .menu li:hover {
+        padding: 12px 30px;
+        background-color: #00b16a;
+        color: rgb(255, 255, 255);
+      }
+      .list {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+        color: #cac8c8;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+
+      .dropdown:hover .list {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        position: absolute;
+        top: 39%;
+        left: 24%;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .list1 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+        color: #cac8c8;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .dropdown1:hover .list1 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        position: absolute;
+        top: 39%;
+        left: 32%;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .list2 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+        color: #cac8c8;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+      .dropdown2:hover .list2 {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        position: absolute;
+        top: 39%;
+        left: 46%;
+        text-transform: lowercase;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animation1">
+      <nav class="h1">
+        <ul class="menu">
+          <li>home</li>
+
+          <li>about us</li>
+          <li class="dropdown">
+            courses
+            <ol class="list">
+              <li>software engineering</li>
+              <li>hardware engineering</li>
+              <li>multimedia & animation</li>
+              <li>e-accounting</li>
+            </ol>
+          </li>
+          <li class="dropdown1">
+            advance courses
+            <ol class="list1">
+              <li>cyber security & eh</li>
+              <li>digital marketing</li>
+              <li>corporate courses</li>
+              <li>short term courses</li>
+            </ol>
+          </li>
+          <li class="dropdown2">
+            academics
+            <ol class="list2">
+              <li>placement</li>
+            </ol>
+          </li>
+          <li>gallery</li>
+          <li>franchise</li>
+          <li>blogs</li>
+          <li>contact us</li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

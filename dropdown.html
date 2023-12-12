@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu {
+        display: inline-flex;
+        list-style: none;
+      }
+      .menu li {
+        padding: 12px 30px;
+        background-color: black;
+        color: white;
+      }
+      .menu li:hover {
+        padding: 12px 30px;
+        background-color: rgb(100, 68, 68);
+            color: rgb(255, 255, 255);}
+      .list {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: none;
+      }
+      .dropdown:hover .list {
+        list-style: none;
+        text-align: left;
+        padding: 0 0;
+        display: inline;
+        position: absolute;
+        top: 31%;
+        left: 10%;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li>home</li>
+        <li class="dropdown">
+          about us
+          <ol class="list">
+            <li>b</li>
+            <li>c</li>
+          </ol>
+        </li>
+        <li>courses</li>
+      </ul>
+    </nav>
+  </body>
+</html>
